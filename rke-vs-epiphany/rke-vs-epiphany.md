@@ -11,7 +11,7 @@
 | Simplified installation                  | :white_check_mark: | Installation is via a single binary and it uses a single YAML file, requires only docker-ce to be pre-installed | :white_check_mark: | |
 | Support Single Node mode                 | :white_check_mark: | -                  | :white_check_mark: | - |
 | Support HA-mode                          | :white_check_mark: | https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/ | :white_check_mark: | https://github.com/epiphany-platform/epiphany/blob/develop/docs/design-docs/kubernetes-ha/kubernetes-ha.md |
-| Possible container runtimes              | Docker             | -                  | Docker             | - |
+| Possible container runtimes              | :white_check_mark: | Docker | :white_check_mark: | Docker |
 | Cluster state file                       | :white_check_mark: | State file is create by default what can be very useful in case of module approach | :x: | - |
 | Simplicity                               | :white_check_mark: | Own solution for setting up a cluster based on the GO language | :x: | Complex solution for setting up a cluster based on python language, ansible tool (stateless) and kubeadm |
 | Up-to-date K8s version                   | :white_check_mark: | The latest version of K8s with a slight delay | :x: | Usually two minor version behind the upstream version |
@@ -19,8 +19,8 @@
 | Offline mode                             | :x: | Not fully supported, we need to provide private Docker registry and the list of required docker images can be easily obtained | :white_check_mark: | - |
 | Upgrade                                  | :white_check_mark: | ~50% faster upgrade than in Epiphany | :white_check_mark: | - |
 | CNI network plugin supported             | :white_check_mark: | Flannel, Calico, Canal (by default), Weave | :white_check_mark: | Flannel, Calico, Canal |
-| Customizability                          | :x: Limited by RKE project | - | :white_check_mark: Totally customizable |
-| Cost                                     | :white_check_mark: Lower | - | :x: Higher | Epiphany team need to mantain all the code and upgrades
+| Customizability                          | :x: | Limited by RKE project | :white_check_mark: | Totally customizable |
+| Cost                                     | :white_check_mark: | Lower | :x: | Higher - Epiphany team need to mantain all the code and upgrades
 | CNCF Certification                       | :white_check_mark: | Every release supports the same APIs as upstream Kubernetes | :white_check_mark: | Every release supports the same APIs as upstream Kubernetes |
 | Installation is idempotent               | :white_check_mark: | - | :white_check_mark: | - |
 | Maintenance                              | :white_check_mark: | - 73 contributors<br /> Last month:<br /> - 8 authors of commits<br /> - 32 active PR<br /> - 26 merged PR<br /> - 13 releases | :white_check_mark: | - 23 contributors<br /> Last month:<br /> - 6 authors of commits<br /> - 36 active PR<br /> - 29 merged PR<br /> - 1 release |
