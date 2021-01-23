@@ -23,8 +23,8 @@
 | Cost                                     | :white_check_mark: Lower | - | :x: Higher | Epiphany team need to mantain all the code and upgrades
 | CNCF Certification                       | :white_check_mark: | Every release supports the same APIs as upstream Kubernetes | :white_check_mark: | Every release supports the same APIs as upstream Kubernetes |
 | Installation is idempotent               | :white_check_mark: | - | :white_check_mark: | - |
-| Maintenance                              | :white_check_mark: | - 73 contributors  Last month:  - 8 authors of commits  - 32 active PR  - 26 merged PR  - 13 releases | :white_check_mark: | - 23 contributors  Last month:  - 6 authors of commits  - 36 active PR  - 29 merged PR  - 1 release|
-| Troubleshooting                          | :white_check_mark: | - 153 open issues  Last month:  - 24 active issues  - 14 closed issues | :white_check_mark: | - 298 open issues  Last month:  - 43 active issues  - 18 closed issues |
+| Maintenance                              | :white_check_mark: | - 73 contributors<br /> Last month:<br /> - 8 authors of commits<br /> - 32 active PR<br /> - 26 merged PR<br /> - 13 releases | :white_check_mark: | - 23 contributors<br /> Last month:<br /> - 6 authors of commits<br /> - 36 active PR<br /> - 29 merged PR<br /> - 1 release |
+| Troubleshooting                          | :white_check_mark: | - 153 open issues<br /> Last month:<br /> - 24 active issues<br /> - 14 closed issues | :white_check_mark: | - 298 open issues<br /> Last month:<br /> - 43 active issues<br /> - 18 closed issues |
 
 
 What we still need to compare: 
