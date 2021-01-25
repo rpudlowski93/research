@@ -17,7 +17,8 @@
 | Up-to-date K8s version                   | :white_check_mark: | The latest version of K8s with a slight delay | :x: | Usually two minor version behind the upstream version |
 | Certificate Management                   | :white_check_mark: | RKE has a rke cert command and it is possible to easily rotate the auto-generated certificates | :x: ? | Epiphany generate custom certification for long time period |
 | Offline mode                             | :x: | Not fully supported, we need to provide private Docker registry and the list of required docker images can be easily obtained | :white_check_mark: | - |
-| Upgrade                                  | :white_check_mark: | ~50% faster upgrade than in Epiphany | :white_check_mark: | - |
+| Fast upgrade                             | :white_check_mark: | ~100% faster upgrade than in Epiphany<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes  | :x: | ~100% longer upgrade than in RKE<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes |
+| Fast installation                        | :white_check_mark: | ~100% faster installation than in Epiphany<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes | :x: | ~100% longer installation than in RKE<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes |
 | CNI network plugin supported             | :white_check_mark: | Flannel, Calico, Canal (by default), Weave | :white_check_mark: | Flannel, Calico, Canal |
 | Customizability                          | :x: | Limited by RKE project | :white_check_mark: | Totally customizable |
 | Cost                                     | :white_check_mark: | Lower | :x: | Higher - Epiphany team need to mantain all the code and upgrades
@@ -28,7 +29,6 @@
 
 
 What we still need to compare more deeply: 
-- How faster the upgrade is in case of RKE ( in progress )
 - Air-gapped/Offline mode
 - Limitation of the cluster installation 
 - Certificate management
