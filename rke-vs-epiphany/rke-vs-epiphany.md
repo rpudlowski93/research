@@ -27,11 +27,12 @@
 | Troubleshooting                          | :white_check_mark: | - 153 open issues<br /> Last month:<br /> - 24 active issues<br /> - 14 closed issues | :white_check_mark: | - 298 open issues<br /> Last month:<br /> - 43 active issues<br /> - 18 closed issues |
 
 
-What we still need to compare: 
+What we still need to compare more deeply: 
+- How faster the upgrade is in case of RKE ( in progress )
 - Air-gapped/Offline mode
 - Limitation of the cluster installation 
-- How faster the upgrade is in case of RKE
 - Certificate management
-- Installations
+- Installations process
 - Society of the projects (Maintenance, Troubleshooting)
 - Documentation
+- HA-mode (in Epiphany we provide HA of the cluster and loadbalancer, how it looks in RKE?)
