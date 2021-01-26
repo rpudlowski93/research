@@ -10,13 +10,14 @@
 | Kubeadm used                             | :x:                | -                  | :white_check_mark: | - |
 | Simplified installation                  | :white_check_mark: | Installation is via a single binary and it uses a single YAML file, requires only docker-ce to be pre-installed | :white_check_mark: | |
 | Support Single Node mode                 | :white_check_mark: | -                  | :white_check_mark: | - |
-| Support HA-mode                          | :white_check_mark: | https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/ | :white_check_mark: | https://github.com/epiphany-platform/epiphany/blob/develop/docs/design-docs/kubernetes-ha/kubernetes-ha.md |
+| Support HA-mode                          | :white_check_mark: | https://rancher.com/docs/rancher/v2.x/en/installation/resources/k8s-tutorials/ha-rke/<br />By default the kubelets and kube-proxies are configured to connect to nginx-proxy service that proxies all requests to all master nodes | :white_check_mark: | https://github.com/epiphany-platform/epiphany/blob/develop/docs/design-docs/kubernetes-ha/kubernetes-ha.md <br /> Based on idea from kubespray HA-mode, on every node lightweight load-balancer is installed that proxies all requests to all master nodes |
 | Possible container runtimes              | :white_check_mark: | Docker | :white_check_mark: | Docker |
+| Hypercube approach                       | :white_check_mark: | Single binary file which contains all set of core Kubernetes components, e.g. API, Scheduler, Controller, etc. The problem with this approach is that bug-fix for API causes update of all core Kubernetes containers. Only single endpoint to download the binary. Kubernetes components as Docker containers - also kubelet. | :x: | Kubeadm installer. On all nodes we need to install kubelet, kubeadm, Docker, kubectl and kubernetes-cni from the Kubernetes upstream repositories. Officially developed and supported by Kubenetes developers. |
 | Cluster state file                       | :white_check_mark: | State file is create by default what can be very useful in case of module approach | :x: | - |
 | Simplicity                               | :white_check_mark: | Own solution for setting up a cluster based on the GO language | :x: | Complex solution for setting up a cluster based on python language, ansible tool (stateless) and kubeadm |
 | Up-to-date K8s version                   | :white_check_mark: | The latest version of K8s with a slight delay | :x: | Usually two minor version behind the upstream version |
 | Certificate Management                   | :white_check_mark: | RKE has a rke cert command and it is possible to easily rotate the auto-generated certificates | :x: ? | Epiphany generate custom certification for long time period |
-| Offline mode                             | :x: | Not fully supported, we need to provide private Docker registry and the list of required docker images can be easily obtained | :white_check_mark: | - |
+| Offline mode                             | :x: | Airgapped supported, offline not fully supported, we need to provide private Docker registry and the list of required docker images can be easily obtained | :white_check_mark: | - |
 | Fast upgrade                             | :white_check_mark: | ~100% faster upgrade than in Epiphany<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes  | :x: | ~100% longer upgrade than in RKE<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes |
 | Fast installation                        | :white_check_mark: | ~100% faster installation than in Epiphany<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes using custom repository feature in Epiphany. Without using the feature, the difference will be even much more bigger. | :x: | ~100% longer installation than in RKE<br /> Comparison made on the basis of cluster with 3 master nodes in HA-mode and 3 worker nodes using custom repository feature in Epiphany. Without using the feature, the difference will be even much more bigger. |
 | CNI network plugin supported             | :white_check_mark: | Flannel, Calico, Canal (by default), Weave | :white_check_mark: | Flannel, Calico, Canal |
@@ -30,7 +31,6 @@
 
 What we still need to compare more deeply: 
 
-- HA-mode (in Epiphany we provide HA of the cluster and loadbalancer, how it looks in RKE?) ( in progress )
 - Maintenance, Troubleshooting
 - Migration of existing products
 - Limitation of the cluster installation 
