@@ -29,10 +29,12 @@
 
 
 What we still need to compare more deeply: 
-- Air-gapped/Offline mode
+
+- HA-mode (in Epiphany we provide HA of the cluster and loadbalancer, how it looks in RKE?) ( in progress )
+- Maintenance, Troubleshooting
+- Migration of existing products
 - Limitation of the cluster installation 
 - Certificate management
 - Installations process
-- Society of the projects (Maintenance, Troubleshooting)
 - Documentation
-- HA-mode (in Epiphany we provide HA of the cluster and loadbalancer, how it looks in RKE?)
+- Air-gapped/Offline mode ( done? )
